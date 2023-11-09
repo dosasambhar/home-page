@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display&family=Poppins:ital,wght@0,300;0,500;0,800;1,100;1,300;1,400;1,700&display=swap');
+
+
+.navbarItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 40px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    width: 99%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 90px;
+    border-style: ridge;
+    margin-top: 1.5rem;
+}
+
+.logo{
+    color: green;
+    font-family:'Playfair Display', serif;
+    justify-self: start;
+    cursor: pointer;
+}
+
+.nav-links{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 55px;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.link{
+    justify-content: end;
+    text-decoration: none;
+    color: black;
+}
+
+.btn{
+    padding: 14px;
+    color: white;
+    background-color: green;
+    border-radius: 6px;
+}
+
+.link i{
+    padding-right: 10px;
+}
+
+.link:hover {
+    background-color: green;
+    border-radius: 4px;
+    padding: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.fa-basr{
+ color: green;
+}
+
+.menu-icon{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .navbarItems{
+        z-index: 99;
+    }
+
+    .nav-links{
+       display: flex; 
+       flex-direction: column;
+       justify-content: flex-start;
+       background: rgba(227, 245, 225, 0.25);
+       box-shadow: 0 8px 32px 0 rgba(31, 28, 135, 0.37);
+       backdrop-filter: blur(4px);
+       border-radius: 13px;
+       width: 100%;
+       height: auto;
+       position: absolute;
+       top: 0;
+       left: -110%;
+       align-items: stretch;
+       padding: 80px 10px 30px 10px;
+       margin: 0;
+       z-index: -1;
+    }
+
+    .nav-links.active{
+        left: 0%;
+    }
+
+    .link{
+        display: block;
+        widows: 100%;
+        padding: 10px 0;
+        color: black;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .btn{
+        padding: 10px;
+        white-space: nowrap;
+        color: white;
+        background-color: green;
+        border-radius: 4px;
+    }
+    
+}
